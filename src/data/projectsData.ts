@@ -1,0 +1,32 @@
+export const projectsData = [
+    {
+      id: 0,
+      title: "Kasa",
+      description: "Projet Front-end d'une application de location de logements",
+      image: "/images/kasaImage.jpg",
+      technologies: ["React.js", "SCSS"],
+      url: "https://kasa-ruddy.vercel.app/",
+      bgColor: "#3f3f46",
+      fontColor: "#FDFDFD",
+    },
+    {
+      id: 1,
+      title: "Code-Editor",
+      description: "Editeur de code en ligne HTML, CSS, JS",
+      image: "/images/codeEditor.webp",
+      technologies: ["React.js", "Redux", "TypeScript", "Tailwind CSS"],
+      url: "https://code-editor-ashen-eta.vercel.app/",
+      bgColor: "#FDFDFD",
+      fontColor: "#FDFDFD",
+    },
+    {
+      id: 2,
+      title: "Pomodoro",
+      description: "Application de gestion du temps de travail de style pomodoro",
+      image: "/images/pomodoroApp.webp",
+      technologies: ["React.js", "Redux", "TypeScript", "Tailwind CSS"],
+      url: "https://pomodoro-kappa-lake.vercel.app/",
+      bgColor: "#3f3f46",
+      fontColor: "#FDFDFD",
+    },
+  ];
