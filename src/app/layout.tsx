@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import Header from "./projects/components/Header";
-import Footer from "./projects/components/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,6 +18,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Thibault - Web Dev",
   description: "Portfolio of Thibault Fregier, Web Developer",
+  robots: "index, follow",
 };
 
 export default function RootLayout({
@@ -29,31 +28,34 @@ export default function RootLayout({
 }>) {
   if (!children) {
     return (
-      <html lang="en" className={`${inter.variable} ${poppins.variable} w-full h-full`}>
-        <body className="antialiased bg-black text-white flex flex-col min-h-screen">
-          <Header />
+      <html
+        lang="fr"
+        className={`${inter.variable} ${poppins.variable} w-full h-full`}
+      >
+        <body className="antialiased bg-black text-white flex flex-col">
           <main className="flex-grow flex items-center justify-center pt-20">
             <div className="text-center text-red-500">
               Oops! Something went wrong. Please try reloading the page.
             </div>
           </main>
-          <Footer />
         </body>
       </html>
     );
   }
 
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable} w-full h-full`}>
+    <html
+      lang="fr"
+      className={`${inter.variable} ${poppins.variable} w-screen h-full overflow-x-hidden`}
+    >
       <body className="antialiased bg-gray-900 text-white flex flex-col min-h-screen">
         <noscript>
           <div className="bg-red-500 text-white p-3 text-center">
-            JavaScript is disabled in your browser. Please enable it for the best experience.
+            JavaScript is disabled in your browser. Please enable it for the
+            best experience.
           </div>
         </noscript>
-        <Header />
-        <main className="flex-grow pt-20">{children}</main>
-        <Footer />
+        <main>{children}</main>
       </body>
     </html>
   );

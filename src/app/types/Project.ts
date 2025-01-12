@@ -5,6 +5,7 @@ export interface Project {
   image: string;
   technologies: string[];
   url?: string;
-  bgColor?: string;
-  fontColor?: string;
+  github?: string;
+  challenges?: string;
+  skillsDeveloped?: string[];
 }
