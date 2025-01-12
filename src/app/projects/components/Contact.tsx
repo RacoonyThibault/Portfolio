@@ -15,7 +15,7 @@ export default function Contact() {
           href="mailto:Fregier.thibault.pro@gmail.com"
           className="inline-block mt-6 px-6 py-3 text-slate-100 bg-purple-600 rounded-xl transition-transform transform hover:bg-slate-800 "
         >
-          M'envoyer un mail
+          M&apos;envoyer un mail
         </a>
       </div>
       <div className="flex justify-between p-4">

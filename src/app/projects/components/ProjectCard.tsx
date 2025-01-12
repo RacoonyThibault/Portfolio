@@ -9,6 +9,8 @@ import {
   SiSass,
   SiTailwindcss,
   SiTypescript,
+  SiHtml5,
+  SiCss3,
 } from "react-icons/si";
 import { Project } from "../../types/Project";
 
@@ -21,6 +23,8 @@ const techIcons: Record<string, JSX.Element> = {
   SCSS: <SiSass className="text-pink-500" />,
   MongoDB: <SiMongodb className="text-green-600" />,
   Redux: <SiRedux className="text-purple-500" />,
+  HTML5: <SiHtml5 className="text-orange-500" />,
+  CSS3: <SiCss3 className="text-blue-500" />,
 };
 
 interface ProjectCardProps {

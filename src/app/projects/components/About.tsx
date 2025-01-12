@@ -9,6 +9,7 @@ import {
   SiSass,
   SiTailwindcss,
   SiTypescript,
+  SiDocker,
 } from "react-icons/si";
 
 const skillIcons: Record<string, JSX.Element> = {
@@ -20,6 +21,7 @@ const skillIcons: Record<string, JSX.Element> = {
   "Tailwind CSS": <SiTailwindcss className="text-teal-400" size={24} />,
   MongoDB: <SiMongodb className="text-green-500" size={24} />,
   SCSS: <SiSass className="text-pink-400" size={24} />,
+  Docker: <SiDocker className="text-blue-500" size={24} />,
 };
 
 export default function About() {
@@ -47,13 +49,13 @@ export default function About() {
             de fournir des solutions propres, efficaces et évolutives.
           </p>
           <p className="mt-4 text-slate-800 leading-relaxed">
-            Au-delà du codage, j'aime explorer de nouvelles technologies, faire
-            de l'escalade, lire et vivre un maximum d'aventures !
+          Au-delà du codage, j&apos;aime explorer de nouvelles technologies, faire
+          de l&apos;escalade, lire et vivre un maximum d&apos;aventures !
           </p>
           <p className="mt-4 text-slate-800 leading-relaxed">
-            C'est grâce à cet état d'esprit volontaire que je souhaite créer des
-            applications web modernes qui puissent donner vie à vos rêves
-            numériques !
+          C&apos;est grâce à cet état d&apos;esprit volontaire que je souhaite créer des
+  applications web modernes qui puissent donner vie à vos rêves
+  numériques !
           </p>
         </div>
       </div>
