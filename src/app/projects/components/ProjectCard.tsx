@@ -14,7 +14,7 @@ import {
 } from "react-icons/si";
 import { Project } from "../../types/Project";
 
-const techIcons: Record<string, JSX.Element> = {
+const techIcons: Record<string, React.ReactElement> = {
   "React.js": <SiReact className="text-blue-500" />,
   "Node.js": <SiNodedotjs className="text-green-500" />,
   "Next.js": <SiNextdotjs className="text-gray-800" />,
