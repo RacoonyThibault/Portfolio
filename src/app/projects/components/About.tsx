@@ -12,7 +12,7 @@ import {
   SiDocker,
 } from "react-icons/si";
 
-const skillIcons: Record<string, JSX.Element> = {
+const skillIcons: Record<string, React.ReactElement> = {
   JavaScript: <SiJavascript className="text-yellow-500" size={24} />,
   TypeScript: <SiTypescript className="text-blue-500" size={24} />,
   "React.js": <SiReact className="text-blue-400" size={24} />,
