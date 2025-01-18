@@ -107,17 +107,35 @@ export default function Contact() {
         )}
       </div>
       <div className="flex justify-between p-4">
-        <p className="text-xs">Thibault Fregier | 2025</p>
+        <p className="text-sm">&copy; Thibault Fregier | 2025</p>
         <div className="flex gap-2">
-          <Link href="https://x.com/FregierThibault">
-            <FaTwitter />
-          </Link>
-          <Link href="https://www.linkedin.com/in/thibaultfregier/">
-            <FaLinkedin />
-          </Link>
-          <Link href="https://github.com/RacoonyThibault/">
-            <FaGithub />
-          </Link>
+        <Link
+      href="https://x.com/FregierThibault"
+      aria-label="Lien vers mon profil Twitter"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-500 hover:text-blue-400 text-3xl"
+    >
+      <FaTwitter aria-hidden="true" />
+    </Link>
+    <Link
+      href="https://www.linkedin.com/in/thibaultfregier/"
+      aria-label="Lien vers mon profil LinkedIn"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-700 hover:text-blue-600 text-3xl"
+    >
+      <FaLinkedin aria-hidden="true" />
+    </Link>
+    <Link
+      href="https://github.com/RacoonyThibault/"
+      aria-label="Lien vers mon profil GitHub"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-900 hover:text-gray-700 text-3xl"
+    >
+      <FaGithub aria-hidden="true" />
+    </Link>
         </div>
       </div>
     </section>

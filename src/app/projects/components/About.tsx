@@ -69,6 +69,7 @@ export default function About() {
           href="/CV_Thibault_Fregier.pdf"
           download="CV_Thibault_Fregier.pdf"
           className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg  hover:bg-slate-800 focus:outline-none transition-all duration-300"
+          aria-label="Télécharger le CV de Thibault Frégier au format PDF"
         >
           <FaDownload />
         </a>
