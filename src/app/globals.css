@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins);
 }
 
-/* Animation de type machine à écrire */
+
 @keyframes typing {
   from {
     width: 0;
@@ -50,19 +50,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Effet de machine à écrire */
+
 .typewriter {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid transparent; /* Ajout du curseur de machine à écrire */
-  width: 100%; /* Utilise toute la largeur disponible */
+  border-right: 3px solid transparent;
+  width: 100%;
   animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-  text-align: center; /* Centre le texte horizontalement */
-  max-width: none; /* Empêche la limite de largeur */
+  text-align: center;
+  max-width: none;
 }
 
-/* Effet de clignotement du curseur */
+
 @keyframes blink {
   50% {
     border-color: transparent;
