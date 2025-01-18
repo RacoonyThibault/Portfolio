@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
+  display: "swap", // Optimisation des polices
 });
 
 const poppins = Poppins({
@@ -22,31 +21,29 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  if (!children) {
-    return (
-      <html
-        lang="fr"
-        className={`${inter.variable} ${poppins.variable} w-full h-full`}
-      >
-        <body className="antialiased bg-black text-white flex flex-col">
-          <main className="flex-grow flex items-center justify-center pt-20">
-            <div className="text-center text-red-500">
-              Oops! Something went wrong. Please try reloading the page.
-            </div>
-          </main>
-        </body>
-      </html>
-    );
-  }
-
+}) {
   return (
     <html
       lang="fr"
       className={`${inter.variable} ${poppins.variable} w-screen h-full overflow-x-hidden`}
     >
+      <head>
+        {/* Ajout du CSS critique ici */}
+        <style>{`/* CSS critique généré par critical */`}</style>
+
+        {/* Chargement différé des styles non critiques */}
+        <link
+          rel="stylesheet"
+          href="/globals.css"
+          media="print"
+          onLoad="this.media='all'"
+        />
+        <noscript>
+          <link rel="stylesheet" href="/globals.css" />
+        </noscript>
+      </head>
       <body className="antialiased bg-gray-900 text-white flex flex-col min-h-screen">
         <noscript>
           <div className="bg-red-500 text-white p-3 text-center">

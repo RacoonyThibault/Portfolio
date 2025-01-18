@@ -37,6 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
       src={project.image || "/default-image.jpg"}
       alt={project.title || "Default Project"}
       fill
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
       className="rounded-lg object-cover"
     />
     <div className="z-10 absolute top-0 w-full hover:bottom-0 hover:top-auto">
@@ -69,42 +70,5 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
         </div>
       </div>
     </div>
-    {/* {isSelected && (
-      <motion.div
-        className="absolute bottom-0 left-0 w-full p-5 bg-black bg-opacity-70 text-white overflow-y-auto max-h-[30vh] sm:max-h-[40vh]"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.3 }}
-      >
-        <h2 id={`project-${project.id}`} className="text-lg font-bold">
-          {project.title}
-        </h2>
-        <p className="text-sm mb-4">
-          {project.description || "No description available."}
-        </p>
-        <div className="flex justify-between items-center">
-          <ul className="list-none space-y-2">
-            {project.technologies.map((tech) => (
-              <li key={tech} className="flex items-center gap-2">
-                {techIcons[tech] || <span className="text-gray-400">?</span>}
-                <span>{tech}</span>
-              </li>
-            ))}
-          </ul>
-          {project.url && (
-            <Link href={`/projects/${project.id}`}>
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="inline-block mt-4 px-4 py-2 gradient-bg text-white text-sm font-medium rounded hover:bg-slate-800 transition"
-              >
-                More details
-              </motion.div>
-            </Link>
-          )}
-        </div>
-      </motion.div>
-    )} */}
   </div>
 );

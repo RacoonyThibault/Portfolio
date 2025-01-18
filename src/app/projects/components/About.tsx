@@ -10,6 +10,8 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiDocker,
+  SiGit,
+  SiGitlab,
 } from "react-icons/si";
 
 const skillIcons: Record<string, React.ReactElement> = {
@@ -22,11 +24,13 @@ const skillIcons: Record<string, React.ReactElement> = {
   MongoDB: <SiMongodb className="text-green-500" size={24} />,
   SCSS: <SiSass className="text-pink-400" size={24} />,
   Docker: <SiDocker className="text-blue-500" size={24} />,
+  Git: <SiGit className="text-orange-500" size={24} />,
+  GitLab: <SiGitlab className="text-red-600" size={24} />,
 };
 
 export default function About() {
   return (
-    <section className="w-full px-6 sm:px-12 py-12 bg-slate-100 text-slate-900">
+    <section id="about-me" className="w-full px-6 sm:px-12 py-12 bg-slate-100 text-slate-900">
       <div className="mt-12 flex flex-col sm:flex-row items-center gap-12">
         <div className="flex-shrink-0">
           <Image
