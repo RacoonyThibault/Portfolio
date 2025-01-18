@@ -11,6 +11,7 @@ import {
   SiTypescript,
   SiHtml5,
   SiCss3,
+  SiGithub,
 } from "react-icons/si";
 import { Project } from "../../types/Project";
 
@@ -32,39 +33,65 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
-  <div className="relative rounded-lg min-w-72 w-[40vw] min-h-56 h-[30vw] overflow-hidden">
-    <Image
-      src={project.image || "/default-image.jpg"}
-      alt={project.title || "Default Project"}
-      fill
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-      className="rounded-lg object-cover"
-    />
-    <div className="z-10 absolute top-0 w-full hover:bottom-0 hover:top-auto">
-      <div className="min-w-72 w-[40vw] min-h-56 h-[30vw]"></div>
-      <div className="bg-slate-900 bg-opacity-60 p-4">
-        <h2 id={`project-${project.id}`} className="text-lg font-bold">
-          {project.title}
-        </h2>
-        <p className="text-sm mb-4">
-          {project.description || "No description available."}
+  <div className="flex flex-col items-center bg-slate-900 bg-opacity-60 rounded-lg overflow-hidden shadow-lg">
+    <div className="relative w-full h-64">
+      <Image
+        src={project.image || "/default-image.jpg"}
+        alt={project.title || "Default Project"}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover"
+      />
+    </div>
+    <div className="p-4 w-full">
+      <h2 id={`project-${project.id}`} className="text-lg font-bold text-white text-center">
+        {project.title}
+      </h2>
+      <p className="text-sm text-gray-300 text-center mb-4">
+        {project.description || "No description available."}
+      </p>
+      {project.challenges && (
+        <p className="text-sm text-gray-400 mb-2">
+          <strong>Défis : </strong>
+          {project.challenges}
         </p>
-        <div className="flex justify-between items-center">
-          <ul className="list-none">
-            {project.technologies.map((tech) => (
-              <li key={tech} className="flex items-center gap-1">
-                {techIcons[tech] || <span className="text-gray-400">?</span>}
-                <span>{tech}</span>
-              </li>
+      )}
+      {project.skillsDeveloped && (
+        <div className="text-sm text-gray-400 mb-4">
+          <strong>Compétences développées : </strong>
+          <ul className="list-disc pl-5">
+            {project.skillsDeveloped.map((skill, index) => (
+              <li key={index}>{skill}</li>
             ))}
           </ul>
+        </div>
+      )}
+      <div className="flex flex-wrap gap-2 items-center justify-center">
+        <ul className="list-none flex flex-wrap gap-2">
+          {project.technologies.map((tech) => (
+            <li key={tech} className="flex items-center gap-1">
+              {techIcons[tech] || <span className="text-gray-400">?</span>}
+              <span className="text-white">{tech}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="flex gap-2 mt-4">
           {project.url && (
             <Link
-              className="inline-block mt-4 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded hover:bg-slate-800 transition"
+              className="inline-block px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded hover:bg-slate-800 transition"
               href={project.url}
               target="_blank"
             >
               Explorer
+            </Link>
+          )}
+          {project.github && (
+            <Link
+              className="inline-flex items-center justify-center p-2 bg-gray-800 text-white text-sm font-medium rounded-full hover:bg-gray-600 transition"
+              href={project.github}
+              target="_blank"
+            >
+              <SiGithub className="text-xl" />
             </Link>
           )}
         </div>
