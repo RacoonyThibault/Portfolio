@@ -50,10 +50,10 @@ export default function About() {
             <span className="font-medium"> Tailwind CSS</span>. Mon objectif est de concevoir des solutions web propres, efficaces et évolutives pour garantir une expérience utilisateur optimale et un code maintenable.
           </p>
           <p className="mt-4 text-slate-800 leading-relaxed">
-          Au-delà du développement, je suis un passionné de technologie et d'aventures. J'aime explorer de nouvelles technologies, m'adonner à l’escalade, lire, et vivre des aventures qui nourrissent ma créativité. Cette curiosité et cet état d'esprit d'exploration me poussent à créer des applications web qui transforment des idées en solutions concrètes.
+            Au-delà du développement, je suis un passionné de technologie et d&apos;aventures. J&apos;aime explorer de nouvelles technologies, m&apos;adonner à l&apos;escalade, lire, et vivre des aventures qui nourrissent ma créativité. Cette curiosité et cet état d&apos;esprit d&apos;exploration me poussent à créer des applications web qui transforment des idées en solutions concrètes.
           </p>
           <p className="mt-4 text-slate-800 leading-relaxed">
-          Mon objectif est de repousser constamment les limites de l'innovation pour offrir des applications qui non seulement répondent aux besoins actuels, mais anticipent les défis de demain. Ensemble, donnons vie à des projets ambitieux qui transforment l’expérience numérique.
+            Mon objectif est de repousser constamment les limites de l&apos;innovation pour offrir des applications qui non seulement répondent aux besoins actuels, mais anticipent les défis de demain. Ensemble, donnons vie à des projets ambitieux qui transforment l&apos;expérience numérique.
           </p>
         </div>
       </div>

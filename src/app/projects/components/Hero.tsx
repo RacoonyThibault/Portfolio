@@ -12,7 +12,7 @@ export default function Hero() {
 
   return (
     <section className="w-full h-screen flex flex-col items-center justify-center text-center">
-      <h1 className="text-4xl font-bold typewriter">Thibault.</h1> {/* Animation du texte */}
+      <h1 className="text-4xl font-bold typewriter">Thibault.</h1>
       <div className="h-[2px] w-10 my-6 bg-purple-600"></div>
       <p className="text-lg text-gray-300 typewriter max-w-[600px] mx-auto">
         Salut, moi c&apos;est Thibault! Un développeur web passionné dédié à
