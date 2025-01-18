@@ -18,7 +18,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Thibault - Web Dev",
   description: "Portfolio of Thibault Fregier, Web Developer",
-  robots: "index, follow", // Permet l'indexation
+  robots: "index, follow",
 };
 
 export default function RootLayout({
@@ -32,9 +32,6 @@ export default function RootLayout({
         lang="fr"
         className={`${inter.variable} ${poppins.variable} w-full h-full`}
       >
-        <head>
-          <meta name="robots" content="index, follow" />
-        </head>
         <body className="antialiased bg-black text-white flex flex-col">
           <main className="flex-grow flex items-center justify-center pt-20">
             <div className="text-center text-red-500">
@@ -51,9 +48,6 @@ export default function RootLayout({
       lang="fr"
       className={`${inter.variable} ${poppins.variable} w-screen h-full overflow-x-hidden`}
     >
-      <head>
-        <meta name="robots" content="index, follow" />
-      </head>
       <body className="antialiased bg-gray-900 text-white flex flex-col min-h-screen">
         <noscript>
           <div className="bg-red-500 text-white p-3 text-center">
