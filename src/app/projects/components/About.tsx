@@ -31,7 +31,7 @@ const skillIcons: Record<string, React.ReactElement> = {
 export default function About() {
   return (
     <section id="about-me" className="w-full px-6 sm:px-12 py-12 bg-slate-100 text-slate-900">
-      <div className="mt-12 flex flex-col sm:flex-row items-center gap-12">
+      <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-12">
         <div className="flex-shrink-0">
           <Image
             src="/images/profilPicture.webp"
@@ -44,40 +44,35 @@ export default function About() {
         <div className="max-w-2xl">
           <h2 className="text-2xl font-semibold">Qui suis-je ?</h2>
           <p className="mt-4 text-slate-800 leading-relaxed">
-            Je me spécialise dans la création d’applications web interactives et
-            réactives utilisant les dernières technologies web. Avec des
-            compétences solide en
+            Je me spécialise dans la création d’applications web modernes et interactives, utilisant les dernières technologies telles que
             <span className="font-medium"> Next.js</span>,
-            <span className=" font-medium"> TypeScript</span>, et
-            <span className="font-medium"> Tailwind CSS</span>, Mon objectif est
-            de fournir des solutions propres, efficaces et évolutives.
+            <span className="font-medium"> TypeScript</span>, et
+            <span className="font-medium"> Tailwind CSS</span>. Mon objectif est de concevoir des solutions web propres, efficaces et évolutives pour garantir une expérience utilisateur optimale et un code maintenable.
           </p>
           <p className="mt-4 text-slate-800 leading-relaxed">
-          Au-delà du codage, j&apos;aime explorer de nouvelles technologies, faire
-          de l&apos;escalade, lire et vivre un maximum d&apos;aventures !
+          Au-delà du développement, je suis un passionné de technologie et d'aventures. J'aime explorer de nouvelles technologies, m'adonner à l’escalade, lire, et vivre des aventures qui nourrissent ma créativité. Cette curiosité et cet état d'esprit d'exploration me poussent à créer des applications web qui transforment des idées en solutions concrètes.
           </p>
           <p className="mt-4 text-slate-800 leading-relaxed">
-          C&apos;est grâce à cet état d&apos;esprit volontaire que je souhaite créer des
-  applications web modernes qui puissent donner vie à vos rêves
-  numériques !
+          Mon objectif est de repousser constamment les limites de l'innovation pour offrir des applications qui non seulement répondent aux besoins actuels, mais anticipent les défis de demain. Ensemble, donnons vie à des projets ambitieux qui transforment l’expérience numérique.
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center">
-        <h2>Mon cv</h2>
+
+      <div className="flex flex-col items-center mt-12">
+        <h2 className="text-2xl font-semibold">Mon CV</h2>
         <a
           href="/CV_Thibault_Fregier.pdf"
           download="CV_Thibault_Fregier.pdf"
-          className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg  hover:bg-slate-800 focus:outline-none transition-all duration-300"
+          className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-slate-800 focus:outline-none transition-all duration-300 mt-4"
           aria-label="Télécharger le CV de Thibault Frégier au format PDF"
         >
-          <FaDownload />
+          <FaDownload className="mr-2" />
+          Télécharger mon CV
         </a>
       </div>
+
       <div className="mt-12 flex flex-col items-center">
-        <h2 className="text-2xl font-semibold text-slate-800 text-center">
-          Skills
-        </h2>
+        <h2 className="text-2xl font-semibold text-slate-800 text-center">Compétences</h2>
         <div className="mt-6 flex flex-wrap justify-center gap-6 max-w-[70%] min-w-64">
           {Object.entries(skillIcons).map(([skill, icon]) => (
             <div
